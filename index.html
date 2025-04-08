@@ -1,12 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ResetInside – Hypnose & Mentale Klarheit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="ResetInside begleitet dich mit Hypnose & mentalem Coaching zu Klarheit, Stärke & Veränderung. Jetzt kostenfrei starten.">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/Sbc4Cq4.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Hier kommt dein CSS hin (bereits vollständig enthalten im Originalcode) */
+  </style>
 </head>
 <body>
-  <h1>ResetInside</h1>
-  <p>Willkommen auf deiner Website!</p>
+  <!-- Ladeanimation -->
+  <div id="loader"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
+
+  <!-- Mobile Menü-Button -->
+  <button class="menu-toggle" aria-label="Menü öffnen" onclick="document.querySelector('nav').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#ueber">Über mich</a>
+    <a href="#angebote">Angebote</a>
+    <a href="#stimmen">Stimmen</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <!-- Video Header -->
+  <header class="video-header">
+    <div class="video-overlay"></div>
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Dein Browser unterstützt keine HTML5-Videos.
+    </video>
+    <div class="header-content">
+      <img src="https://i.imgur.com/Sbc4Cq4.png" alt="ResetInside Logo">
+      <h1 id="typed-text">Veränderung beginnt in dir</h1>
+      <p>Hypnose, mentale Klarheit und echte Selbstverbindung – ohne Hype, ohne Esoterik.</p>
+      <a href="#kontakt" class="button">Jetzt starten</a>
+    </div>
+  </header>
+
+  <!-- Über mich -->
+  <section id="ueber" class="split" data-aos="fade-up">
+    <div style="flex: 1 1 50%">
+      <h2>Über mich</h2>
+      <p>Hi, ich bin Benni – Hypnosecoach mit Herz und klarem Blick. Mein Weg hat mich durch Sport, Coaching und persönliche Transformation geführt – heute helfe ich Menschen dabei, wieder bei sich selbst anzukommen.</p>
+    </div>
+  </section>
+
+  <!-- Angebote -->
+  <section id="angebote" class="alt-section" data-aos="fade-up">
+    <h2>Angebote</h2>
+    <div class="offers">
+      <div class="offer-card">
+        <h3>Einzelhypnose</h3>
+        <p>60 Minuten Klarheit & Loslassen<br>inkl. Vorgespräch & Audio</p>
+        <strong>119 €</strong>
+      </div>
+      <div class="offer-card">
+        <h3>Reset-Paket</h3>
+        <p>3 Sitzungen für nachhaltige Veränderung<br>mit Begleitung & Coaching</p>
+        <strong>299 €</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stimmen -->
+  <section id="stimmen" data-aos="fade-up">
+    <h2>Was andere sagen</h2>
+    <blockquote>“Ich war skeptisch – aber nach der ersten Session habe ich so viel Klarheit gespürt.”</blockquote>
+    <blockquote>“Das Reset-Paket hat mein Leben verändert.”</blockquote>
+  </section>
+
+  <!-- Kontaktformular -->
+  <section id="kontakt" data-aos="fade-up">
+    <h2>Kontakt</h2>
+    <div class="form-container">
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="Deine E-Mail" required>
+        <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Nachricht senden</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="alt-section" style="text-align:center; padding: 3rem 2rem;" data-aos="fade-up">
+    <h2>Bereit für deinen Reset?</h2>
+    <p style="font-size: 1.2rem;">Jetzt kostenfreies Gespräch vereinbaren oder direkt starten.</p>
+    <a href="#kontakt" class="button">Gespräch anfragen</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ResetInside – Benedikt Spiess</p>
+    <p><a href="#" onclick="alert('Impressum: Benedikt Spiess, ResetInside, Ulm\nKontakt: kontakt@resetinside.de'); return false;">Impressum</a> |
+    <a href="#" onclick="alert('Datenschutz: Deine Daten werden nur zur Bearbeitung deiner Anfrage verwendet. Es erfolgt keine Weitergabe an Dritte.'); return false;">Datenschutz</a></p>
+  </footer>
+
+  <!-- Skripte -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    const typed = new Typed("#typed-text", {
+      strings: [
+        "Veränderung beginnt in dir",
+        "… mit Hypnose",
+        "… mit mentaler Klarheit",
+        "… mit deinem Reset"
+      ],
+      typeSpeed: 40,
+      backSpeed: 30,
+      backDelay: 1600,
+      loop: true
+    });
+  </script>
 </body>
 </html>
